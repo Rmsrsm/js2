@@ -105,3 +105,21 @@ function createReservation(employeeId, vehicleId) {
 }
 
 
+const findEmployeeById = employeeId => employees.find(employee => employee.id === employeeId);
+const findVehicleById = vehicleId => vehicles.find(vehicle => vehicle.id === vehicleId);
+
+
+
+createReservation(101, 1);
+createReservation(201, 4);
+
+console.log("قائمة الحجوزات:");
+
+reservations.map(res =>{
+console.log(`
+reservationId: ${res.reservationId}
+reservationDate: ${res.reservationDate}
+employeeId: ${res.employeeId}
+vehicleId:  ${res.vehicleId}
+`);
+})
